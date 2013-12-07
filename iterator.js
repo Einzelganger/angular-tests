@@ -5,6 +5,10 @@ function listIter($scope) {
     {text: 'Sandwich'},
     {text: 'Pastry'},
     {text: 'Snack-a-Jacks'}			
-];
-
+  ];
 }
+
+$scope.AddFood = function(){
+  $scope.foods.push(foods.text);
+})
+
