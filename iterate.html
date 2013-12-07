@@ -1,0 +1,16 @@
+<html ng-app>
+<head>
+  <script src="angular.js"></script>
+  <script src="iterator.js"></script>
+</head>
+<body>
+  <h4> Lijstje </h4>
+  <div ng-controller="listIter">
+    <ul>		
+    <li ng-repeat='fooditem in foods'>
+      <span> {{fooditem.text}}</span>
+    </li>
+    </ul>
+  </div>  
+</body>
+</html>
