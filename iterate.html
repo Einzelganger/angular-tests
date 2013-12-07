@@ -4,11 +4,13 @@
   <script src="iterator.js"></script>
 </head>
 <body>
+    <input id="textFilter" type="text" ng-model="search" class="search-query" placeholder="Search"></input>
+  </div> 
   <h4> Lijstje </h4>
   <div ng-controller="listIter">
     <ul>		
-    <li ng-repeat='fooditem in foods'>
-      <span> {{fooditem.text}}</span>
+    <li ng-repeat="fooditem in foods | filter:search" >
+       {{fooditem.text }}
     </li>
     </ul>
   </div>  

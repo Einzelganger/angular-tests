@@ -1,8 +1,10 @@
 function listIter($scope) {
   $scope.foods = [
-    {text: 'Apples'},
-    {text: 'Cookies'},
-    {text: 'Sandwich'}		
+    {text: 'Apple'},
+    {text: 'Cookie'},
+    {text: 'Sandwich'},
+    {text: 'Pastry'},
+    {text: 'Snack-a-Jacks'}			
 ];
 
 }
