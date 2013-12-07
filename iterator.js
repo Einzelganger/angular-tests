@@ -10,5 +10,5 @@ function listIter($scope) {
 
 $scope.AddFood = function(){
   $scope.foods.push(foods.text);
-})
+}
 
