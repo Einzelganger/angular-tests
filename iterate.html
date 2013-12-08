@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app>
 <head>
   <script src="angular.js"></script>
@@ -5,8 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input id="textFilter" type="text" ng-model="search" placeholder="Search"></input>
-  </div> 
+    <input id="textFilter" type="text" ng-model="search" placeholder="Search" />
   <h4> Lijstje </h4>
   <div ng-controller="listIter">
     <ul>		
@@ -14,10 +14,8 @@
        {{fooditem.text }}
     </li>
     </ul>
-  </div> 
-  <form>
-  <input id="newItem" type="text" ng-model="foods.text" placeholder="Add new item"> </input> 
- <button ng-click="AddFood()"> Add food item </button>
- </form>
+    <input id="newItem" type="text" ng-model="food" placeholder="Add new item"/>
+    <button ng-click="addFood()"> Add food item </button>
+  </div>
 </body>
 </html>

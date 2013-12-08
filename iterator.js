@@ -6,9 +6,21 @@ function listIter($scope) {
     {text: 'Pastry'},
     {text: 'Snack-a-Jacks'}			
   ];
+
+  $scope.addFood = function(){
+    $scope.foods.push({text: $scope.food});
+    $scope.food = "";
+  }
 }
 
-$scope.AddFood = function(){
-  $scope.foods.push(foods.text);
-}
+//var foodApp = angular.module('foodApp', [])
+//foodApp.controller('foodControl', ['$scope', function($scope){
+
+//function foodControl($scope){
+//  $scope.addFood = function(){
+//    $scope.foods.push($scope.food);
+//    $scope.food = "";
+//  }
+//}
+//}]);
 
