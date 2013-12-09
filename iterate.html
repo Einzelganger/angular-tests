@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='foodApp'>
 <head>
   <script src="angular.js"></script>
   <script src="iterator.js"></script>
@@ -7,15 +7,18 @@
 </head>
 <body>
     <input id="textFilter" type="text" ng-model="search" placeholder="Search" />
-  <h4> Lijstje </h4>
-  <div ng-controller="listIter">
-    <ul>		
-    <li ng-repeat="fooditem in foods | filter:search" >
-       {{fooditem.text }}
-    </li>
-    </ul>
+  <h4>Boodschappenlijstje </h4>
+  <div ng-controller="foodControl">
+    <div os-listcopy foods='foods'></div>
     <input id="newItem" type="text" ng-model="food" placeholder="Add new item"/>
     <button ng-click="addFood()"> Add food item </button>
+  </div>
+
+  <h4>LabelNamen</h4> 
+  <div ng-controller='labelControl'>
+    <ul>
+      <li ng-repeat="label in labels" >{{label}}</li>
+    </ul> 
   </div>
 </body>
 </html>
