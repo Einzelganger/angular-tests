@@ -13,14 +13,21 @@ function listIter($scope) {
   }
 }
 
-//var foodApp = angular.module('foodApp', [])
-//foodApp.controller('foodControl', ['$scope', function($scope){
+/*var foodApp = angular.module('foodApp', []);
 
-//function foodControl($scope){
-//  $scope.addFood = function(){
-//    $scope.foods.push($scope.food);
-//    $scope.food = "";
-//  }
-//}
-//}]);
+  foodApp.controller('foodControl', ['$scope', function($scope){
 
+  $scope.foods = [
+    {text: 'Apple'},
+    {text: 'Cookie'},
+    {text: 'Sandwich'},
+    {text: 'Pastry'},
+    {text: 'Snack-a-Jacks'}			
+  ];
+
+  $scope.addFood = function(){
+    $scope.foods.push({text: $scope.food});
+    $scope.food = "";
+  }
+}]);
+*/
