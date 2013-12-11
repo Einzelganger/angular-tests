@@ -6,7 +6,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input id="textFilter" type="text" ng-model="search" placeholder="Search" />
+
+  <hr />   
+  <input id="textFilter" type="text" ng-model="search" placeholder="Search" />
   <h4>Boodschappenlijstje </h4>
   <div ng-controller="foodControl">
     <div os-listcopy foods='foods'></div>
@@ -14,11 +16,34 @@
     <button ng-click="addFood()"> Add food item </button>
   </div>
 
+  <hr />
   <h4>LabelNamen</h4> 
   <div ng-controller='labelControl'>
     <ul>
       <li ng-repeat="label in labels" >{{label}}</li>
     </ul> 
   </div>
+
+  <hr />
+	 <h4>Voer een e-mailadres in</h4>
+	 <form name="mailForm" ng-controller="miscControl">
+	    adres: <input type="email" name="input" ng-model="mailField" required>
+		<br />
+		<p ng-show=mailForm.input.$valid> This paragraph shows up if the email is valid </p> 
+	 </form>  
+	 <hr />
+			
+	 <p ng-class="superstyle">This paragraph should have some fancy style using ng-class. </p>
+	 <input type="text" ng-model="superstyle" placeholder="type bold, strike or a color name"/>
+	 <hr />
+		  
+   ng-if Checkbox example: <input type="checkbox" ng-model="checked" ng-init="checked=true" /> <br/> 
+   <br /> 
+Change the max. length of the sentence below: <input type="text" ng-model="letterLimit"  placeholder="60"/>  
+    <div ng-if="checked" > {{ "The css class is applied if the checkbox is checked." | limitTo:letterLimit }}
+    <br />
+    </div>
+  <hr />
+ 
 </body>
 </html>

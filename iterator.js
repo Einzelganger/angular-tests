@@ -17,6 +17,15 @@ var foodApp = angular.module('foodApp', []);
 		  }  
   }]);
 
+  foodApp.controller('miscControl', ['$scope', function($scope){
+  }]);
+
+  foodApp.controller('switchControl', ['$scope', function($scope){
+ 
+    $scope.items = ['settings','home','other'];
+    $scope.selection = $scope.items[0];
+  }]);
+
   foodApp.controller('labelControl', ['$scope','$http', 
     function($scope, $http) {
       
